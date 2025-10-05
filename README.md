@@ -82,9 +82,6 @@ Base URL: http://localhost:5000
 
 ## Testing with Postman (local)
 
-Notes:
-- If you use Postman in a browser, you must install and run the Postman Desktop Agent so Postman can send requests to `localhost`.
-- Prefer the Postman Desktop app (or Desktop Agent) to avoid localhost/networking restrictions.
 
 Suggested environment variables for Postman:
 - base_url = http://localhost:5000
