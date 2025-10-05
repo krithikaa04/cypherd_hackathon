@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Wallet - CypherD Hackathon</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔐 Web3 Wallet</h1>
+            <p>CypherD Hackathon Project</p>
+        </header>
+
+        <div id="wallet-section" class="section hidden">
+            <div class="wallet-info">
+                <h2>Your Wallet</h2>
+                <div class="info-box">
+                    <label>Address:</label>
+                    <div class="address-display" id="wallet-address"></div>
+                </div>
+                <div class="info-box">
+                    <label>Balance:</label>
+                    <div class="balance-display" id="wallet-balance"></div>
+                </div>
+                <div class="info-box">
+                    <label>Private Key:</label>
+                    <div class="private-key-display" id="wallet-private-key"></div>
+                    <small style="color: #666;">⚠️ Keep this private! In a real app, this would be securely stored.</small>
+                </div>
+            </div>
+
+            <div class="transfer-section">
+                <h3>Send ETH</h3>
+                <form id="transfer-form">
+                    <div class="form-group">
+                        <label>Recipient Address</label>
+                        <input type="text" id="recipient-address" placeholder="0x..." required>
+                    </div>
+                    <div class="form-group">
+                        <label>Amount (USD)</label>
+                        <input type="number" id="amount-usd" step="0.01" placeholder="100.00" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send ETH</button>
+                </form>
+            </div>
+
+            <div class="transactions-section">
+                <h3>Transaction History</h3>
+                <div id="transactions-list"></div>
+            </div>
+        </div>
+
+        <div id="create-wallet-section" class="section">
+            <h2>Get Started</h2>
+            <p>Create a new wallet or access an existing one</p>
+            <button id="create-wallet-btn" class="btn btn-primary">Create New Wallet</button>
+            <div class="divider">OR</div>
+            <div class="form-group">
+                <label>Access Existing Wallet</label>
+                <input type="text" id="existing-address" placeholder="Enter your wallet address">
+                <button id="access-wallet-btn" class="btn btn-secondary">Access Wallet</button>
+            </div>
+        </div>
+
+        <div id="approval-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Approve Transaction</h3>
+                <div id="approval-message" class="approval-box"></div>
+                <div class="modal-actions">
+                    <button id="confirm-btn" class="btn btn-primary">Confirm & Sign</button>
+                    <button id="cancel-btn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
