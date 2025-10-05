@@ -4,8 +4,6 @@
 
 This is a Web3 wallet demo application (CypherD Hackathon). It provides a simple local environment to create Ethereum wallets, view balances, prepare transfers (USD → ETH quoting), sign transfer messages and execute transfers in a mock ledger backed by SQLite.
 
-The project is intentionally simplified for demonstration and learning purposes: private keys are stored plaintext in the local database and balances are mocked. Do not use this code as-is in production.
-
 ---
 
 ## Quickstart — run locally
@@ -35,6 +33,7 @@ The project is intentionally simplified for demonstration and learning purposes:
 
 The API will be available at http://localhost:5000
 
+View demo [here](https://github.com/krithikaa04/cypherd_hackathon/blob/main/demo.mp4)
 ---
 
 ## How the project works (high level)
@@ -47,7 +46,7 @@ The API will be available at http://localhost:5000
 
 ---
 
-## API Reference (short)
+## API Reference 
 
 Base URL: http://localhost:5000
 
